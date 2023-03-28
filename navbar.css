@@ -8,9 +8,16 @@
   position: relative;
   padding: 0 10px;
   cursor: pointer;
+  color: white; 
+  transition: all 300ms;
+
 }
 
-.nav-item::after {
+.nav-item:hover{
+  color: #abababf7
+}
+
+/* .nav-item::after {
   content: "";
   position: absolute;
   background-color: var(--cta-color);
@@ -24,22 +31,25 @@
 
 .nav-item:hover::after {
   width: 100%;
-}
+} */
 
 .logo {
+  font-size: 21px;
   font-family: "Josefin Sans", sans-serif;
   cursor: pointer;
+  color: white
 }
 
 .navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
   justify-content: space-around;
   align-items: center;
-}
-
-.navbar {
   height: 63px;
   padding: 3px;
-  background-color: white;
+  background-color: transparent;
   padding: 0px;
   display: flex;
   flex-direction: row;
@@ -62,17 +72,15 @@
   stroke-dasharray: 60 31 60 300;
 }
 
-.hamburger-menu:hover{
-    translate: 0 -2.5px;
-    rotate: 45deg;
+.hamburger-menu:hover {
+  translate: 0 -2.5px;
+  rotate: 45deg;
 }
 
 .hamburger-menu:hover .line {
   stroke-dasharray: 60 105 60 300;
   stroke-dashoffset: -90;
 }
-
-
 
 @media screen and (max-width: 900px) {
   .navbar {

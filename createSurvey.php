@@ -10,10 +10,14 @@
   </head>
   <body>
     <div class="content-wrapper">
-      <form action="createSurvey.php" method="post" class="form">
-        <input type="text" name="question-input" />
-        
-      </form>
+      <div class="input-container">
+        <?php
+
+        $step = 1;
+        echo "<b>Step " . $step . "</b>";
+
+        ?>
+      </div>
     </div>
   </body>
 </html>

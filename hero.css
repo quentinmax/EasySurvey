@@ -1,0 +1,32 @@
+.presentation-container{
+    top: 0;
+    left: 22%;
+    right: 22%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+
+.card-container{
+    z-index: 10;
+    background-color: rgba(155, 123, 166, 0.351);
+    aspect-ratio: 1/1.5;
+    padding: 8px;
+    position: relative;
+    width: 250px;
+    border-radius: 8px;
+    margin: auto;
+    line-height: 185%;
+
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.351);
+    border-left: 1px solid rgba(255, 255, 255, 0.351);
+
+    display: flex;
+    justify-content: center;
+    text-align: left;
+
+    color: white;
+}

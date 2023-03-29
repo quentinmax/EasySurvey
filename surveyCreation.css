@@ -1,4 +1,9 @@
-.content-wrapper {
+body{
+  overflow: hidden;
+}
+
+.survey-form {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -6,12 +11,41 @@
   align-items: center;
 }
 
-.input-container {
+.step {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   width: 60%;
   height: 70%;
   background-color: white;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.current{
+  display: flex;
+}
+
+.step:not(:first-of-type){
+  display: none;
+}
+
+.progress-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar{
+}
+
+.name-input{
+  outline: none;
   padding: 20px;
+  border-radius: 8px;
+  font-size: 20px;
 }

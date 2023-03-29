@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="surveyCreation.css" />
+    <link rel="stylesheet" href="main.css" />
+
+
+    <title>EasySurvey</title>
+  </head>
+  <body>
+    <form class="survey-form">
+      <div class="step" data-step="1">
+        <div class="progress-info">
+          <div class="progress-bar">
+              1. <br/></br>
+          </div>
+          <h1>
+            Wie heißt deine Umfrage?
+          </h1>
+        </div>
+        <input placeholder="Name" name="survey-name" type="text" class="name-input"/>
+        <button class="cta-btn continue-btn" data-set-step="2">Weiter</button>
+      </div>
+      <div class="step" data-step="2">
+        <div class="progress-info">
+          <div class="progress-bar">
+              2
+          </div>
+          <h1>
+            Was gibts denn zu wissen?
+          </h1>
+        </div>
+        <input placeholder="Frage" type="text" class="name-input"/>
+        <button class="add-question-btn">Weitere Frage hinzufügen</button>
+        <button class="cta-btn continue-btn" data-set-step="3">Weiter</button>
+      </div>
+      <div class="step" data-step="3">
+        <div class="progress-info">
+          <div class="progress-bar">
+              3
+          </div>
+          <h1>
+            Hier ist der Code zum Teilen
+          </h1>
+        </div>
+        <a placeholder="Name" type="button" class="cta-btn">Weiter zum Ergebnis</a>
+      </div>
+    </form>
+  </body>
+  <script>
+    //https://codeshack.io/multi-step-survey-form-js-php/
+    document.querySelectorAll(".cta-btn").forEach(element => {
+    element.onclick = event => {
+       event.preventDefault();
+       setStep(parseInt(element.dataset.setStep));
+      };
+   });
+    const setStep = step => {
+    document.querySelectorAll(".step").forEach(element => element.style.display = "none");
+    document.querySelector("[data-step='" + step + "']").style.display = "flex";
+    document.querySelectorAll(".step").forEach((element, index) => {
+    index < step-1 ? element.classList.add("complete") : element.classList.remove("complete");
+    index == step-1 ? element.classList.add("current") : element.classList.remove("current");
+    });
+  };
+  </script>
+</html>
